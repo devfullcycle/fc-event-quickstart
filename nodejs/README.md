@@ -13,11 +13,26 @@ Para instalar o `nvm` precisamos executar um `script` de instalação como abaix
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
-Abra um terminal e rode o comando abaixo para verificar se a instalação está correta:
+Após executar o comando acima feche o terminal e abra um novo terminal e rode o comando abaixo para verificar se a instalação está correta:
 
 `nvm --version`
 
 A saída do terminal deve ser a versão do `nvm`.
+
+Caso a saída for diferente da versão do `nvm` ou um erro verifique o arquivo do `shell` como o exemplo abaixo:
+
+bash: `vim ~/.bashrc`
+
+zsh: `vim ~/.zshrc`
+
+Dentro do arquivo deve conter a seguinte informação:
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+Se o conteúdo acima não estiver no arquivo execute este comando acima em um terminal para incluir a variável de ambiente do `nvm`.
 
 ---
 
@@ -32,6 +47,16 @@ No terminal:
 `nvm ls`
 
 Veremos a versão `19` listada.
+
+Para utilizar a versão `19` rode o comando:
+
+`nvm use 19`
+
+E para deixar esta versão como `default` rode o comando:
+
+`nvm alias default 19`
+
+Com isso todas as vezes que for utilizar o `node` a versão `19` será utilizada.
 
 ---
 
