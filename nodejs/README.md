@@ -1,8 +1,8 @@
 ## Instalação Node.Js
 
-Primeiro precisamos instalar um gerenciador de versões do `node.js` que neste caso será o `nvm`.
+É importante que tudo o que formos instalar para fins de desenvolvimento e um melhor acompanhamento do curso seja instalado dentro do `WSL`, enquanto estivermos desenvolvendo pense apenas no `WSL (Linux)`.
 
--- Justificativa para uso do WSL
+Primeiro precisamos instalar um gerenciador de versões do `node.js` que neste caso será o `nvm`.
 
 ---
 ### Linux / MacOS / Windows (WSL):
@@ -21,28 +21,46 @@ Após executar o comando acima feche o terminal e abra um novo terminal e rode o
 
 A saída do terminal deve ser a versão do `nvm`.
 
-Caso a saída for diferente da versão do `nvm` ou um erro verifique o arquivo do `shell` como o exemplo abaixo:
--- acrescentar o comando cat para verificar se o pós-comando foi acrescentado nos arquivos
+Caso a saída for diferente da versão do `nvm` ou recebermos um erro verifique o arquivo do `shell` como o exemplo abaixo:
 
--- Para o Bash ou oh-my-zsh (acrescente os tipos de shell)
+Caso utilize o terminal `bash` padrão do `WSL` rode o comando abaixo:
 
 bash: `cat ~/.bashrc`
 
+Caso utilize o terminal `oh-my-zsh` rode o comando abaixo:
+
 zsh: `cat ~/.zshrc`
 
-Dentro do arquivo deve conter a seguinte informação:
+A saída do comando acima deve conter a seguinte informação:
 
 ```
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
--- acrescentar no fim do arquivo
-Se o conteúdo acima não estiver no arquivo execute este comando acima em um terminal para incluir a variável de ambiente do `nvm`.
+Se o conteúdo acima não estiver no arquivo execute este comando abaixo e vamos incluir a variável de ambiente do `nvm`.
+
+Caso utilize o terminal `bash` padrão do `WSL` rode o comando abaixo, confirme se o terminal que será executado os comandos abaixo de instalação é o correto `(bash)`:
 
 bash: `code ~/.bashrc`
 
+Inclua ao final do arquivo o seguinte código:
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+Caso utilize o terminal `oh-my-zsh` rode o comando abaixo confirme se o terminal que será executado os comandos abaixo de instalação é o correto `(oh-my-zsh (zsh))`.:
+
 zsh: `code ~/.zshrc`
+
+Inclua ao final do arquivo o seguinte código:
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
 
 ---
 
