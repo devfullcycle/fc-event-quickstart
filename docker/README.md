@@ -250,8 +250,6 @@ Link: https://www.microsoft.com/store/productId/9N0DX20HK701
 
 A configuração para deixar o `Terminal do WSL (Linux)` como padrão está na aba do tutorial do `WSL` 
 
-    #(acrescente trecho de live sobre como fazer backup e restauração do WSL)
-
 # Linux
 
 Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
