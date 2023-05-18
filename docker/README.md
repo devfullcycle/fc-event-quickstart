@@ -1,26 +1,30 @@
 ## Instalação Docker
 
-É importante que tudo o que formos instalar para fins de desenvolvimento e um melhor acompanhamento do curso seja instalado dentro do `WSL`, enquanto estivermos desenvolvendo pense apenas no `WSL (Linux)`.
-
 ## Windows
 
+É importante que tudo o que formos instalar para fins de desenvolvimento e um melhor acompanhamento do curso seja instalado dentro do `WSL`, enquanto estivermos desenvolvendo pense apenas no `WSL (Linux)`.
+//colocar link do WSL
 ---
 
-Um passo importantes antes de iniciar a instalação do `Docker` é verificar se não há alguma atualização do `Windows` pendente, para isso acesse `Configurações` e vá até o menu do `Windows Update`, confirme se existe alguma atualização a ser realizada, é importante manter o `Windows` atualizado, pois isso irá manter o `WSL` sempre com as últimas atualizações.
+//simplificar este paragráfo, dizendo que é para verificar atualização do Windows e que isto é importante porque o WSL é atualizado via Windows Update
+Um passo importante antes de iniciar a instalação do `Docker` é verificar se não há alguma atualização do `Windows` pendente, para isso acesse `Configurações` e vá até o menu do `Windows Update`, confirme se existe alguma atualização a ser realizada, é importante manter o `Windows` atualizado, pois isso irá manter o `WSL` sempre com as últimas atualizações.
+
+//Abrir o DOS ou PowerShell e rodar o wsl --update.
 
 ---
 
 Não é recomendado a utilização do `Docker Desktop`, além de consumir muita memória `RAM` (Aproximadamente 2GB) e impactar em uma pequena parte de consumo do `CPU`.
-Percebemos uma diferença significativa de performance e um ponto importante é que ele não é compatível com `host.docker.internal` e durante nosso curso vamos utilizar o `host.docker.internal` para realizar a comunicação entre os `containers`.
 
 Abaixo um vídeo sobre o Porque não é recomendado o uso do Docker Desktop.
 
 ### Link: https://www.youtube.com/watch?v=wpdcGgRY5kk
 
+// se for necessário trabalhar com imagem baseadas em Windows
 A única opção para utilizar o `Docker Desktop` é no seguinte cenário: quando precisamos trabalhar com `containers Windows` para `.NET` ou funcionalidades referente a `Microsoft`, veja que são casos específicos.
 
 ---
 
+//remover
 ## Outras distros Linux
 
 Para realizar a intalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
@@ -33,13 +37,8 @@ Para realizar a intalação do `Docker` em outras distro `Linux` veja o link aba
 
 Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
 
-Desinstale todas as versões anteriores com o seguinte comando:
-
-```bash
-sudo apt-get remove docker docker-engine docker.io containerd runc
-```
-
-1 - Agora instale os pacotes necessários para a isntalação:
+//aplicar uma formatação melhor para os tópicos
+1 - Agora instale os pacotes necessários para a instalação:
 
 ```bash
 sudo apt-get update
@@ -82,22 +81,11 @@ sudo docker run hello-world
 ```
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
-
-1 - Crie o grupo docker.
-```bash
-sudo groupadd docker
-```
-
+//revisar
 2 - Adicione o seu usuário no grupo docker
 
 ```bash
 sudo usermod -aG docker $USER
-```
-
-3 - Execute o seguinte comando para ativar as mudanças de grupos
-
-```bash
-newgrp docker
 ```
 
 4 - Rode o comando sem o sudo:
@@ -126,12 +114,6 @@ Rode novamente o comando: `sudo service docker start` e teste com o comando: `do
 
 Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
 
-Desinstale todas as versões anteriores com o seguinte comando:
-
-```bash
-sudo apt-get remove docker docker-engine docker.io containerd runc
-```
-
 1 - Agora instale os pacotes necessários para a isntalação:
 
 ```bash
@@ -175,22 +157,11 @@ sudo docker run hello-world
 ```
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
-
-1 - Crie o grupo docker.
-```bash
-sudo groupadd docker
-```
-
+//revisar
 2 - Adicione o seu usuário no grupo docker
 
 ```bash
 sudo usermod -aG docker $USER
-```
-
-3 - Execute o seguinte comando para ativar as mudanças de grupos
-
-```bash
-newgrp docker
 ```
 
 4 - Rode o comando sem o sudo:
@@ -212,7 +183,7 @@ Rode o comando: `sudo update-alternatives --config iptables` e escolha a opção
 Rode novamente o comando: `sudo service docker start` e teste com o comando: `docker ps`, caso não receba mais nenhum erro tudo estará correto.
 
 ---
-
+//revisar - colocar que é necessário rodar o comando sudo service docker start, mas é possível roda-lo automaticamente com WSL através do /etc/wsl.conf
 No `Windows 11` podemos incluir um comando padrão para que o ao iniciarmos o `WSL` o `Docker` também incie.
 
 Primeiro vamos editar o arquivo `/etc/wsl.conf`: 
@@ -234,6 +205,11 @@ command="service docker start"
 
 ### Caminhos de projetos:
 
+//revisar - porque isto é importante
+//se tiver com receio de colocar seus projetos dentro do WSL com medo de perde-los, é possível fazer backup do WSL de forma bem simples (executar DOS ou PowerShell):
+//wsl --export Ubuntu C:\caminho\backup.tar
+//para importar
+//wsl --import Ubuntu C:\caminho\backup.tar
 Caso tenha algum projeto criado dentro de `C:` sugerimos que sejam transferidos para dentro do `WSL (Linux)`.
 
 E novos projetos devem ser criados dentro de: 
@@ -242,9 +218,10 @@ E novos projetos devem ser criados dentro de:
 
 ---
 
+//VSCode
 ### Instalações necessárias:
 
-Uma extensâo importante que precisamos ter instalada é o `WSL`:
+Uma extensão importante que precisamos ter instalada é o `WSL`:
 
 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">
 
@@ -279,6 +256,7 @@ A configuração para deixar o `Terminal do WSL (Linux)` como padrão está na a
 
 Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
 
+//revisar - deixar claro que a desinstalação é para Docker Engine anteriores
 Desinstale todas as versões anteriores com o seguinte comando:
 
 ```bash
@@ -329,21 +307,11 @@ sudo docker run hello-world
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
-1 - Crie o grupo docker.
-```bash
-sudo groupadd docker
-```
-
+//revisar
 2 - Adicione o seu usuário no grupo docker
 
 ```bash
 sudo usermod -aG docker $USER
-```
-
-3 - Execute o seguinte comando para ativar as mudanças de grupos
-
-```bash
-newgrp docker
 ```
 
 4 - Rode o comando sem o sudo:
