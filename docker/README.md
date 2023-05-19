@@ -32,12 +32,12 @@ A única opção para utilizar o `Docker Desktop` é no seguinte cenário: quand
 
 Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
-* [1 - Agora instale os pacotes necessários para a instalação:](#1---agora-instale-os-pacotes-necessários-para-a-instalação)
-* [2 - Adicione a GPG key oficial do Docker:](#2---adicione-a-gpg-key-oficial-do-docker)
-* [3 - Set o repositório com o comando abaixo](#3---set-o-repositório-com-o-comando-abaixo)
-* [4 - Execute a apt update](#4---execute-a-apt-update)
-* [5 - Instale a versão mais atual](#5---instale-a-versão-mais-atual)
-* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo)
+1. [- Agora instale os pacotes necessários para a instalação:](#1---agora-instale-os-pacotes-necessários-para-a-instalação)
+2. [- Adicione a GPG key oficial do Docker:](#2---adicione-a-gpg-key-oficial-do-docker)
+3. [- Set o repositório com o comando abaixo](#3---set-o-repositório-com-o-comando-abaixo)
+4. [- Execute a apt update](#4---execute-a-apt-update)
+5. [- Instale a versão mais atual](#5---instale-a-versão-mais-atual)
+6. [- Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo)
 
 ### 1 - Agora instale os pacotes necessários para a instalação:
 
@@ -83,8 +83,8 @@ sudo docker run hello-world
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
-* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuário-no-grupo-docker)
-* [2 - Rode o comando sem o sudo](#2---adicione-a-gpg-key-oficial-do-docker)
+1. [- Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuário-no-grupo-docker)
+2. [- Rode o comando sem o sudo](#2---adicione-a-gpg-key-oficial-do-docker)
 
 ### 1 - Adicione o seu usuário no grupo docker:
 
@@ -118,12 +118,12 @@ Rode novamente o comando: `sudo service docker start` e teste com o comando: `do
 
 Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
-* [1 - Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-1)
-* [2 - Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-1)
-* [3 - Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-1)
-* [4 - Execute a apt update](#4---execute-a-apt-update-1)
-* [5 - Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-1)
-* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-1)
+1. [- Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-1)
+2. [- Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-1)
+3. [- Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-1)
+4. [- Execute a apt update](#4---execute-a-apt-update-1)
+5. [- Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-1)
+6. [- Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-1)
 
 ### 1 - Agora instale os pacotes necessários para a instalação:
 
@@ -169,8 +169,8 @@ sudo docker run hello-world
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
-* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-1)
-* [2 - Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-1)
+1. [- Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-1)
+2. [- Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-1)
 
 ### 1 - Adicione o seu usuário no grupo docker:
 
@@ -239,15 +239,11 @@ Este é um ponto muito importante, sempre que criar novos projetos eles devem se
 
 ---
 
-//VSCode
 ### Instalações necessárias:
 
 Uma extensão importante que precisamos ter instalada é o `WSL`:
 
-<a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">
-
 ![Extensão WSL](img/extensao-wsl.png)
-</a>
 
 Quando abrir o projeto com o `VsCode` repare se o icone abaixo a esquerda esta da seguinte forma:
 
@@ -267,7 +263,7 @@ Uma modal será aberta no `VsCode` com algumas opções, selecione `Connect to W
 
 Recomendamos também o uso do `Windows Terminal`, ele irá auxiliar caso precise mais de um terminal, ele possui a opção de abas.
 
-Link: https://www.microsoft.com/store/productId/9N0DX20HK701
+Link: [https://www.microsoft.com/store/productId/9N0DX20HK701](https://www.microsoft.com/store/productId/9N0DX20HK701)
 
 A configuração para deixar o `Terminal do WSL (Linux)` como padrão está na aba do tutorial do `WSL` 
 
@@ -276,12 +272,12 @@ A configuração para deixar o `Terminal do WSL (Linux)` como padrão está na a
 Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
 * [Desinstale todas as versões do `Docker Engine` anteriores com o seguinte comando](#desinstale-todas-as-versões-do-docker-engine-anteriores-com-o-seguinte-comando)
-* [1 - Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-2)
-* [2 - Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-2)
-* [3 - Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-2)
-* [4 - Execute a apt update](#4---execute-a-apt-update-2)
-* [5 - Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-2)
-* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-2)
+1. [- Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-2)
+2. [- Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-2)
+3. [- Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-2)
+4. [- Execute a apt update](#4---execute-a-apt-update-2)
+5. [- Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-2)
+6. [- Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-2)
 
 ### Desinstale todas as versões do `Docker Engine` anteriores com o seguinte comando:
 
@@ -331,8 +327,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker run hello-world
 ```
 
-* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-2)
-* [Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-2)
+1. [- Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-2)
+2. [- Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-2)
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
@@ -352,7 +348,7 @@ docker run hello-world
 
 Para realizar a instalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
 
-### Link: https://docs.docker.com/engine/install/#server
+Link: [https://docs.docker.com/engine/install/#server](https://docs.docker.com/engine/install/#server)
 
 ---
 
