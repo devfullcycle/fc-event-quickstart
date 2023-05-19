@@ -1,15 +1,20 @@
-## Instalação Docker
+# Instalação Docker
 
 ## Windows
 
 É importante que tudo o que formos instalar para fins de desenvolvimento e um melhor acompanhamento do curso seja instalado dentro do `WSL`, enquanto estivermos desenvolvendo pense apenas no `WSL (Linux)`.
-//colocar link do WSL
----
 
-//simplificar este paragráfo, dizendo que é para verificar atualização do Windows e que isto é importante porque o WSL é atualizado via Windows Update
-Um passo importante antes de iniciar a instalação do `Docker` é verificar se não há alguma atualização do `Windows` pendente, para isso acesse `Configurações` e vá até o menu do `Windows Update`, confirme se existe alguma atualização a ser realizada, é importante manter o `Windows` atualizado, pois isso irá manter o `WSL` sempre com as últimas atualizações.
+Abaixo temos um link que ao clicar você será direcionado para o tutorial de instalação e configuração do `WSL (Linux)`.
 
-//Abrir o DOS ou PowerShell e rodar o wsl --update.
+Link: [Tutorial WSL](../README.md)
+
+Um passo importante antes de iniciar a instalação do `Docker` é verificar se há alguma atualização do `Windows` pendente, é importante manter o `Windows` atualizado, pois isso irá manter o `WSL` sempre com as últimas atualizações.
+
+Antes de iniciar abra o terminal `DOS ou PowerShell` e execute o seguinte comando: 
+
+`wsl --update`
+
+Este comando irá atualizar o `WSL` caso haja algo a ser atualizado.
 
 ---
 
@@ -17,35 +22,31 @@ Não é recomendado a utilização do `Docker Desktop`, além de consumir muita 
 
 Abaixo um vídeo sobre o Porque não é recomendado o uso do Docker Desktop.
 
-### Link: https://www.youtube.com/watch?v=wpdcGgRY5kk
+Link: [https://www.youtube.com/watch?v=wpdcGgRY5kk](https://www.youtube.com/watch?v=wpdcGgRY5kk)
 
-// se for necessário trabalhar com imagem baseadas em Windows
-A única opção para utilizar o `Docker Desktop` é no seguinte cenário: quando precisamos trabalhar com `containers Windows` para `.NET` ou funcionalidades referente a `Microsoft`, veja que são casos específicos.
-
----
-
-//remover
-## Outras distros Linux
-
-Para realizar a intalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
-
-### Link: https://docs.docker.com/engine/install/#server
+A única opção para utilizar o `Docker Desktop` é no seguinte cenário: quando precisamos trabalhar com `imagens baseadas em Windows` para `.NET` ou funcionalidades referente a `Microsoft`, veja que são casos específicos.
 
 ---
 
 ## Windows 10
 
-Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
+Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
-//aplicar uma formatação melhor para os tópicos
-1 - Agora instale os pacotes necessários para a instalação:
+* [1 - Agora instale os pacotes necessários para a instalação:](#1---agora-instale-os-pacotes-necessários-para-a-instalação)
+* [2 - Adicione a GPG key oficial do Docker:](#2---adicione-a-gpg-key-oficial-do-docker)
+* [3 - Set o repositório com o comando abaixo](#3---set-o-repositório-com-o-comando-abaixo)
+* [4 - Execute a apt update](#4---execute-a-apt-update)
+* [5 - Instale a versão mais atual](#5---instale-a-versão-mais-atual)
+* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo)
+
+### 1 - Agora instale os pacotes necessários para a instalação:
 
 ```bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
 ```
 
-2 - Adicione a GPG key oficial do Docker:
+### 2 - Adicione a GPG key oficial do Docker:
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -53,7 +54,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
-3 - Set o repositório com o comando abaixo:
+### 3 - Set o repositório com o comando abaixo:
 
 ```bash
 echo \
@@ -62,33 +63,36 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-4 - Execute a apt update:
+### 4 - Execute a apt update:
 
 ```bash
 sudo apt-get update
 ```
 
-5 - Instale a versão mais atual
+### 5 - Instale a versão mais atual:
 
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-6 - Teste executando o comando abaixo
+### 6 - Teste executando o comando abaixo:
 
 ```bash
 sudo docker run hello-world
 ```
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
-//revisar
-2 - Adicione o seu usuário no grupo docker
+
+* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuário-no-grupo-docker)
+* [2 - Rode o comando sem o sudo](#2---adicione-a-gpg-key-oficial-do-docker)
+
+### 1 - Adicione o seu usuário no grupo docker:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-4 - Rode o comando sem o sudo:
+### 2 - Rode o comando sem o sudo:
 
 ```bash
 docker run hello-world
@@ -112,16 +116,23 @@ Rode novamente o comando: `sudo service docker start` e teste com o comando: `do
 
 ## Windows 11
 
-Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
+Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
-1 - Agora instale os pacotes necessários para a isntalação:
+* [1 - Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-1)
+* [2 - Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-1)
+* [3 - Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-1)
+* [4 - Execute a apt update](#4---execute-a-apt-update-1)
+* [5 - Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-1)
+* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-1)
+
+### 1 - Agora instale os pacotes necessários para a instalação:
 
 ```bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
 ```
 
-2 - Adicione a GPG key oficial do Docker:
+### 2 - Adicione a GPG key oficial do Docker:
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -129,7 +140,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
-3 - Set o repositório com o comando abaixo:
+### 3 - Set o repositório com o comando abaixo:
 
 ```bash
 echo \
@@ -138,33 +149,36 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-4 - Execute a apt update:
+### 4 - Execute a apt update:
 
 ```bash
 sudo apt-get update
 ```
 
-5 - Instale a versão mais atual
+### 5 - Instale a versão mais atual:
 
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-6 - Teste executando o comando abaixo
+### 6 - Teste executando o comando abaixo:
 
 ```bash
 sudo docker run hello-world
 ```
 
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
-//revisar
-2 - Adicione o seu usuário no grupo docker
+
+* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-1)
+* [2 - Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-1)
+
+### 1 - Adicione o seu usuário no grupo docker:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-4 - Rode o comando sem o sudo:
+### 2 - Rode o comando sem o sudo:
 
 ```bash
 docker run hello-world
@@ -183,8 +197,8 @@ Rode o comando: `sudo update-alternatives --config iptables` e escolha a opção
 Rode novamente o comando: `sudo service docker start` e teste com o comando: `docker ps`, caso não receba mais nenhum erro tudo estará correto.
 
 ---
-//revisar - colocar que é necessário rodar o comando sudo service docker start, mas é possível roda-lo automaticamente com WSL através do /etc/wsl.conf
-No `Windows 11` podemos incluir um comando padrão para que o ao iniciarmos o `WSL` o `Docker` também incie.
+
+Para iniciar o `Docker` precisamos sempre executar o comando `sudo service docker start`, mas no `Windows 11` podemos incluir um comando padrão para que ao iniciarmos o `WSL` o `Docker` também inicie.
 
 Primeiro vamos editar o arquivo `/etc/wsl.conf`: 
 
@@ -205,14 +219,21 @@ command="service docker start"
 
 ### Caminhos de projetos:
 
-//revisar - porque isto é importante
-//se tiver com receio de colocar seus projetos dentro do WSL com medo de perde-los, é possível fazer backup do WSL de forma bem simples (executar DOS ou PowerShell):
-//wsl --export Ubuntu C:\caminho\backup.tar
-//para importar
-//wsl --import Ubuntu C:\caminho\backup.tar
-Caso tenha algum projeto criado dentro de `C:` sugerimos que sejam transferidos para dentro do `WSL (Linux)`.
+É importante criarmos nossos projetos dentro do `WSL (Linux)`, pois gera uma melhor compatibilidade e conexão com as diferentes ferramentas que estaremos utilizando, como: `Docker`, `linguagens de programação`, etc..., visto que sempre faremos as instalações dentro do `WSL (Linux)`.
 
-E novos projetos devem ser criados dentro de: 
+Temos uma forma simples de realizar o `backup` do `WSL (Linux)`, vamos executar os comandos abaixo via terminal `DOS ou PowerShell`:
+
+Para realizar o `backup` digite: 
+
+`wsl --export Ubuntu C:\CAMINHO_A_SUA_ESCOLHA\NOME_DO_BACKUP.tar`
+
+E para importar este `backup` digite: 
+
+`wsl --import Ubuntu C:\CAMINHO_A_SUA_ESCOLHA\NOME_DO_BACKUP.tar`
+
+Caso tenha algum projeto criado dentro de `C:` sugerimos que seja transferido para dentro do `WSL (Linux)`.
+
+Este é um ponto muito importante, sempre que criar novos projetos eles devem ser criados dentro de: 
 
 `/home/SEU_USER`
 
@@ -230,11 +251,11 @@ Uma extensão importante que precisamos ter instalada é o `WSL`:
 
 Quando abrir o projeto com o `VsCode` repare se o icone abaixo a esquerda esta da seguinte forma:
 
-![Icone WSL em execução](img/icone-wsl-execucao.png)
+![Ícone WSL em execução](img/icone-wsl-execucao.png)
 
-Caso não esteja aparecendo "WSL:Ubuntu" podemos perder performance e o projeto não será visualizado de forma correta, para resolvermos isso clique no icone:
+Caso não esteja aparecendo "WSL:Ubuntu" podemos perder performance e o projeto não será visualizado de forma correta, para resolvermos isso clique no ícone:
 
-![Icone de execução VsCode](img/icone-execucao-vscode.png)
+![Ícone de execução VsCode](img/icone-execucao-vscode.png)
 
 Uma modal será aberta no `VsCode` com algumas opções, selecione `Connect to WSL`:
 
@@ -252,23 +273,30 @@ A configuração para deixar o `Terminal do WSL (Linux)` como padrão está na a
 
 # Linux
 
-Pra termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga a instruções abaixo para instalação do Docker Engine na distruibição Linux Ubuntu. 
+Para termos bons resultados em relação às aulas, é importante usar o Docker Engine. Caso tenha instalado o Docker Desktop, por favor, desinstale e siga as instruções abaixo para instalação do Docker Engine na distribuição Linux Ubuntu. 
 
-//revisar - deixar claro que a desinstalação é para Docker Engine anteriores
-Desinstale todas as versões anteriores com o seguinte comando:
+* [Desinstale todas as versões do `Docker Engine` anteriores com o seguinte comando](#desinstale-todas-as-versões-do-docker-engine-anteriores-com-o-seguinte-comando)
+* [1 - Agora instale os pacotes necessários para a instalação](#1---agora-instale-os-pacotes-necessc3a1rios-para-a-instalac3a7c3a3o-2)
+* [2 - Adicione a GPG key oficial do Docker](#2---adicione-a-gpg-key-oficial-do-docker-2)
+* [3 - Set o repositório com o comando abaixo](#3---set-o-repositc3b3rio-com-o-comando-abaixo-2)
+* [4 - Execute a apt update](#4---execute-a-apt-update-2)
+* [5 - Instale a versão mais atual](#5---instale-a-versc3a3o-mais-atual-2)
+* [6 - Teste executando o comando abaixo](#6---teste-executando-o-comando-abaixo-2)
+
+### Desinstale todas as versões do `Docker Engine` anteriores com o seguinte comando:
 
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
-1 - Agora instale os pacotes necessários para a isntalação:
+### 1 - Agora instale os pacotes necessários para a instalação:
 
 ```bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
 ```
 
-2 - Adicione a GPG key oficial do Docker:
+### 2 - Adicione a GPG key oficial do Docker:
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -276,7 +304,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
-3 - Set o repositório com o comando abaixo:
+### 3 - Set o repositório com o comando abaixo:
 
 ```bash
 echo \
@@ -285,34 +313,36 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-4 - Execute a apt update:
+### 4 - Execute a apt update:
 
 ```bash
 sudo apt-get update
 ```
 
-5 - Instale a versão mais atual
+### 5 - Instale a versão mais atual:
 
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-6 - Teste executando o comando abaixo
+### 6 - Teste executando o comando abaixo:
 
 ```bash
 sudo docker run hello-world
 ```
 
+* [1 - Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuc3a1rio-no-grupo-docker-2)
+* [Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo-2)
+
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
-//revisar
-2 - Adicione o seu usuário no grupo docker
+### 1 - Adicione o seu usuário no grupo docker:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-4 - Rode o comando sem o sudo:
+### 2 - Rode o comando sem o sudo:
 
 ```bash
 docker run hello-world
@@ -320,7 +350,7 @@ docker run hello-world
 
 ## Outras distros Linux
 
-Para realizar a intalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
+Para realizar a instalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
 
 ### Link: https://docs.docker.com/engine/install/#server
 
@@ -333,3 +363,4 @@ Para a instalação do `Docker` no `MacOs M1 e Intel` precisamos utilizar o `Doc
 Basta acessar o link abaixo e escolher o `chip` da sua máquina:
 
 https://docs.docker.com/desktop/install/mac-install/
+
