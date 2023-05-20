@@ -84,7 +84,7 @@ sudo docker run hello-world
 Depois de instalado, execute os seguinte passos para remover a necessidade de rodar o docker com sudo:
 
 1. [- Adicione o seu usuário no grupo docker](#1---adicione-o-seu-usuário-no-grupo-docker)
-2. [- Rode o comando sem o sudo](#2---adicione-a-gpg-key-oficial-do-docker)
+2. [- Rode o comando sem o sudo](#2---rode-o-comando-sem-o-sudo)
 
 ### 1 - Adicione o seu usuário no grupo docker:
 
