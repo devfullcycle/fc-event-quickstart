@@ -98,11 +98,13 @@ sudo usermod -aG docker $USER
 docker run hello-world
 ```
 
+### Inicializando o Docker:
+
 Observação importante: Sempre que iniciarmos o `WSL (Linux)`, precisamos rodar o comando: `sudo service docker start`
 
 ---
 
-Possível erro ao iniciar o `Docker` no `Ubuntu 22.04`
+### Possível erro ao iniciar o `Docker` no `Ubuntu 22.04`
 
 Se ao tentar iniciar o `Docker` e receber o seguinte erro:
 
@@ -186,7 +188,7 @@ docker run hello-world
 
 ---
 
-Possível erro ao iniciar o `Docker` no `Ubuntu 22.04`
+### Possível erro ao iniciar o `Docker` no `Ubuntu 22.04`:
 
 Se ao tentar iniciar o `Docker` e receber o seguinte erro:
 
@@ -197,6 +199,8 @@ Rode o comando: `sudo update-alternatives --config iptables` e escolha a opção
 Rode novamente o comando: `sudo service docker start` e teste com o comando: `docker ps`, caso não receba mais nenhum erro tudo estará correto.
 
 ---
+
+### Inicializando o Docker:
 
 Para iniciar o `Docker` precisamos sempre executar o comando `sudo service docker start`, mas no `Windows 11` podemos incluir um comando padrão para que ao iniciarmos o `WSL` o `Docker` também inicie.
 
@@ -215,7 +219,7 @@ command="service docker start"
 
 ---
 
-## Recomendações: `Windows 10 / 11`
+## Recomendações: `Windows 10 / 11`:
 
 ### Caminhos de projetos:
 
@@ -239,7 +243,7 @@ Este é um ponto muito importante, sempre que criar novos projetos eles devem se
 
 ---
 
-### Instalações necessárias:
+## Instalações necessárias:
 
 Uma extensão importante que precisamos ter instalada é o `WSL`:
 
@@ -259,7 +263,7 @@ Uma modal será aberta no `VsCode` com algumas opções, selecione `Connect to W
 
 ---
 
-### Windows Terminal:
+## Windows Terminal:
 
 Recomendamos também o uso do `Windows Terminal`, ele irá auxiliar caso precise mais de um terminal, ele possui a opção de abas.
 
@@ -344,6 +348,8 @@ sudo usermod -aG docker $USER
 docker run hello-world
 ```
 
+---
+
 ## Outras distros Linux
 
 Para realizar a instalação do `Docker` em outras distro `Linux` veja o link abaixo e siga os passos recomendados pela documentação oficial:
@@ -359,4 +365,3 @@ Para a instalação do `Docker` no `MacOs M1 e Intel` precisamos utilizar o `Doc
 Basta acessar o link abaixo e escolher o `chip` da sua máquina:
 
 https://docs.docker.com/desktop/install/mac-install/
-
