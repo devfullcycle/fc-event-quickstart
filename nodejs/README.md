@@ -64,9 +64,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 ---
 
-Agora para instalarmos a versão `19` do `Node.js` que utilizaremos no curso, vamos abrir o terminal e executar o comando:
+Agora para instalarmos a versão `20` do `Node.js` que utilizaremos no curso, vamos abrir o terminal e executar o comando:
 
-`nvm install 19`
+`nvm install 20`
 
 Ele irá baixar a versão que escolhemos acima, então vamos verificar a instalação:
 
@@ -74,17 +74,17 @@ No terminal:
 
 `nvm ls`
 
-Veremos a versão `19` listada.
+Veremos a versão `20` listada.
 
-Para utilizar a versão `19` rode o comando:
+Para utilizar a versão `20` rode o comando:
 
-`nvm use 19`
+`nvm use 20`
 
 E para deixar esta versão como `default` rode o comando:
 
-`nvm alias default 19`
+`nvm alias default 20`
 
-Com isso todas as vezes que for utilizar o `node` a versão `19` será utilizada.
+Com isso todas as vezes que for utilizar o `node` a versão `20` será utilizada.
 
 ---
 
