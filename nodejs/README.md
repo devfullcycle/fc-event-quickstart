@@ -1,5 +1,7 @@
 ## Instalação Node.Js
 
+É importante que tudo o que formos instalar para fins de desenvolvimento e um melhor acompanhamento do curso seja instalado dentro do `WSL`, enquanto estivermos desenvolvendo pense apenas no `WSL (Linux)`.
+
 Primeiro precisamos instalar um gerenciador de versões do `node.js` que neste caso será o `nvm`.
 
 ---
@@ -19,26 +21,52 @@ Após executar o comando acima feche o terminal e abra um novo terminal e rode o
 
 A saída do terminal deve ser a versão do `nvm`.
 
-Caso a saída for diferente da versão do `nvm` ou um erro verifique o arquivo do `shell` como o exemplo abaixo:
+Caso a saída for diferente da versão do `nvm` ou recebermos um erro verifique o arquivo do `shell` como o exemplo abaixo:
 
-bash: `vim ~/.bashrc`
+Caso utilize o terminal `bash` padrão do `WSL` rode o comando abaixo:
 
-zsh: `vim ~/.zshrc`
+bash: `cat ~/.bashrc`
 
-Dentro do arquivo deve conter a seguinte informação:
+Caso utilize o terminal `oh-my-zsh` rode o comando abaixo:
+
+zsh: `cat ~/.zshrc`
+
+A saída do comando acima deve conter a seguinte informação:
 
 ```
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-Se o conteúdo acima não estiver no arquivo execute este comando acima em um terminal para incluir a variável de ambiente do `nvm`.
+Se o conteúdo acima não estiver no arquivo execute este comando abaixo e vamos incluir a variável de ambiente do `nvm`.
+
+Caso utilize o terminal `bash` padrão do `WSL` rode o comando abaixo, confirme se o terminal que será executado os comandos abaixo de instalação é o correto `(bash)`:
+
+bash: `code ~/.bashrc`
+
+Inclua ao final do arquivo o seguinte código:
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+Caso utilize o terminal `oh-my-zsh` rode o comando abaixo confirme se o terminal que será executado os comandos abaixo de instalação é o correto `(oh-my-zsh (zsh))`.:
+
+zsh: `code ~/.zshrc`
+
+Inclua ao final do arquivo o seguinte código:
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
 
 ---
 
-Agora para instalarmos a versão `19` do `Node.js` que utilizaremos no curso, vamos abrir o terminal e executar o comando:
+Agora para instalarmos a versão `20` do `Node.js` que utilizaremos no curso, vamos abrir o terminal e executar o comando:
 
-`nvm install 19`
+`nvm install 20`
 
 Ele irá baixar a versão que escolhemos acima, então vamos verificar a instalação:
 
@@ -46,17 +74,17 @@ No terminal:
 
 `nvm ls`
 
-Veremos a versão `19` listada.
+Veremos a versão `20` listada.
 
-Para utilizar a versão `19` rode o comando:
+Para utilizar a versão `20` rode o comando:
 
-`nvm use 19`
+`nvm use 20`
 
 E para deixar esta versão como `default` rode o comando:
 
-`nvm alias default 19`
+`nvm alias default 20`
 
-Com isso todas as vezes que for utilizar o `node` a versão `19` será utilizada.
+Com isso todas as vezes que for utilizar o `node` a versão `20` será utilizada.
 
 ---
 
