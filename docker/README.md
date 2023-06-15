@@ -6,7 +6,7 @@
 
 Abaixo temos um link que ao clicar você será direcionado para o tutorial de instalação e configuração do `WSL (Linux)`.
 
-Link: [Tutorial WSL](../README.md)
+Link: [Tutorial WSL](https://github.com/codeedu/wsl2-docker-quickstart)
 
 Um passo importante antes de iniciar a instalação do `Docker` é verificar se há alguma atualização do `Windows` pendente, é importante manter o `Windows` atualizado, pois isso irá manter o `WSL` sempre com as últimas atualizações.
 
