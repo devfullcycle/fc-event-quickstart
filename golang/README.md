@@ -15,20 +15,22 @@ wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
 Remova qualquer instalação anterior do Go excluindo a pasta /usr/local/go (se existir) e extraia o arquivo que você acabou de baixar em /usr/local, criando uma nova árvore Go em /usr/local/go:
 
 ```bash
-$ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
+$ sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
 ```
-
-(Talvez seja necessário executar o comando como root ou através do sudo).
-
-Não descompacte o arquivo em uma árvore /usr/local/go existente. Isso é conhecido por produzir instalações Go com erros.
 
 Adicione /usr/local/go/bin à variável de ambiente PATH.
-Você pode fazer isso adicionando a seguinte linha ao seu $HOME/.profile ou /etc/profile (para uma instalação em todo o sistema):
+
+Você pode fazer isso executando um dos seguintes comandos:
 ```bash
-export PATH=$PATH:/usr/local/go/bin
+# Para usuários que utilizam o Bash
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+
+# Para usuários que utilizam o Zsh
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+
 ```
 
-Observação: as alterações feitas em um arquivo de perfil podem não ser aplicadas até a próxima vez que você fizer login no computador. Para aplicar as alterações imediatamente, basta executar os comandos shell diretamente ou executá-los a partir do perfil usando um comando como source $HOME/.profile.
+Observação: Para aplicar as alterações imediatamente, basta abrir uma nova instância no terminal.
 
 Verifique se você instalou o Go abrindo um prompt de comando e digitando o seguinte comando:
 ```bash
@@ -47,7 +49,7 @@ https://go.dev/dl/go1.20.4.darwin-amd64.pkg
 
 Para processadores ADM64, baixe o instalador no link abaixo
 
-https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+https://go.dev/dl/go1.20.4.darwin-arm64.pkg
 
 Abra o arquivo do pacote que você baixou e siga as instruções para instalar o Go.
 O pacote instala a distribuição Go em /usr/local/go. O pacote deve colocar o diretório /usr/local/go/bin em sua variável de ambiente PATH. Pode ser necessário reiniciar qualquer sessão aberta do Terminal para que a alteração entre em execução.
@@ -60,8 +62,21 @@ $ go version
 
 Confirme se o comando imprime a versão instalada do Go.
 
+Caso o diretório /usr/local/go/bin não esteja em sua variável de ambiente PATH, execute um dos comandos abaixo:
+
+```bash
+# Para usuários que utilizam o Bash
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+
+# Para usuários que utilizam o Zsh
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+
+```
+
+Observação: Para aplicar as alterações imediatamente, basta abrir uma nova instância no terminal.
+
 ## Windows/wsl
 
-Pra a instalação no WSL, siga as instruções informadas para Linux
+Para que você tenha uma boa experiência com as aulas, é importante que a instalação do Golang seja feita no WSL/Ubuntu. A instalação do Golang usando o executável para o Windows não trará os resultados esperados.
 
-
+Portanto, para a instalação do Golang no WSL, siga as instruções informadas para Linux.
