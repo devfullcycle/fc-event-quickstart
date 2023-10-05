@@ -9,7 +9,7 @@ https://go.dev/dl/
 Baixe executando o seguinte comando:
 
 ```bash
-wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
 ```
 
 Remova qualquer instalação anterior do Go excluindo a pasta /usr/local/go (se existir) e extraia o arquivo que você acabou de baixar em /usr/local, criando uma nova árvore Go em /usr/local/go:
