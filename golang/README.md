@@ -15,7 +15,7 @@ wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
 Remova qualquer instalação anterior do Go excluindo a pasta /usr/local/go (se existir) e extraia o arquivo que você acabou de baixar em /usr/local, criando uma nova árvore Go em /usr/local/go:
 
 ```bash
-$ sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
+$ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
 ```
 
 Adicione /usr/local/go/bin à variável de ambiente PATH.
